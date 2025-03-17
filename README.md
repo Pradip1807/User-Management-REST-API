@@ -66,7 +66,49 @@ The project is organized into the following key components:
 #### 1. Clone the Repository:
 
 ```bash
-git clone https://github.com/your-username/user-management-api.git
-cd user-management-api
+git clone https://github.com/Pradip1807/User-Management-REST-API
 ```
+
+#### 2. Set Up MySQL Database:
+
+##### Open MySQL and create a database:
+
+```sql
+CREATE DATABASE user_management_db;
+```
+
+### 3. Configure Database Connection:
+
+#### Open the src/main/resources/application.properties file and update the following properties with your MySQL credentials:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/user_management_db
+spring.datasource.username=root
+spring.datasource.password=India@123
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+### 4. Run the Application:
+
+#### Using IntelliJ IDEA:
+
+- Open the project in IntelliJ IDEA.
+
+- Right-click on the UserManagementApplication class and select Run.
+
+
+#### Using Maven:
+
+```bash
+mvn spring-boot:run
+```
+
+### 5. Access the API:
+
+- The API will be available at http://localhost:8080.
+
+---
+
+## API Endpoints
 
