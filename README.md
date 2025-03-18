@@ -59,7 +59,7 @@ The project is organized into the following key components:
 ### Prerequisites
 
 1. **Java Development Kit (JDK)**: JDK 17 or later.
-2. **MySQL**: Install MySQL and create a database named user_management.
+2. **MySQL**: Install MySQL and create a database named user_management_db.
 3. **Maven**: For building and managing the project.
 4. **Postman** or any API testing tool.
 
@@ -161,24 +161,23 @@ mvn spring-boot:run
     "age": 24
   }
   ]
-  
-```
+  ```
 
 ### 3. Retrieve a Single User
+
 - **Method**: GET
-
 - **URL**: /api/users/1
-
 - **Response**:
 
-```json
-{
+  ```json
+  {
     "id": 1,
     "name": "Pradip Kumar",
     "email": "pradip@gmail.com",
     "age": 23
   }
-```
+
+  ```
 
 ### 4. Update a User
 - **Method**: PUT
