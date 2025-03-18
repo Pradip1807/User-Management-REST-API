@@ -211,6 +211,84 @@ mvn spring-boot:run
 
 - **Response**: 204 No Content
 
+---
+
+## Sample Requests/Responses
+
+### Create a User
+- **Request**:
+```json
+{
+  "name": "Pradip Kumar",
+  "email": "pradip@gmail.com",
+  "age": 23
+}
+```
+
+- **Response**:
+```json
+{
+  "id": 1,
+  "name": "Pradip Kumar",
+  "email": "pradip@gmail.com",
+  "age": 23
+}
+```
+
+### Retrieve All Users
+- **Response**:
+  ```json
+  [
+  {
+    "id": 1,
+    "name": "Pradip Kumar",
+    "email": "pradip@gmail.com",
+    "age": 23
+  },
+  {
+    "id": 2,
+    "name": "Bikky Raja",
+    "email": "bikky@gmail.com",
+    "age": 24
+  }
+  ]
+  ```
+### Retrieve a Single User
+- **Response**:
+ ```json
+  {
+    "id": 1,
+    "name": "Pradip Kumar",
+    "email": "pradip@gmail.com",
+    "age": 23
+  }
+
+  ```
+
+### Update a User
+- **Request**:
+```json
+{
+  "name": "Kumar Pradip",
+  "email": "kumar@gmail.com",
+  "age": 24
+}
+```
+- **Response**:
+
+```json
+{
+  "id": 1
+  "name": "Kumar Pradip",
+  "email": "kumar@gmail.com",
+  "age": 24
+}
+```
+
+### Delete a User
+- **Response**: 204 No Content
+
+---
 
 ## Technologies Used
 - **Backend Framework**: Java, Spring Boot
@@ -221,6 +299,8 @@ mvn spring-boot:run
 
 - **API Testing**: Postman
 
+---
+
 ## Error Handling
 ### The API handles the following errors:
 
@@ -229,6 +309,8 @@ mvn spring-boot:run
 - **404 Not Found**: User not found.
 
 - **500 Internal Server Error**: Server-side errors.
+
+---
 
 ## Contact and Support
 For any issues or queries, please contact: Email: kumarpradip1807@gmail.com
