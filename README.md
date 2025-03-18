@@ -10,6 +10,8 @@ This is a simple RESTful API for managing users. It provides basic CRUD (Create,
 - [Setup Instructions](#setup-instructions)
 - [API Endpoints](#api-endpoints)
 - [Sample Requests/Responses](#sample-requests/responses)
+- [Technologies Used](#technologies-used)
+- [Error Handling](#error-handling)
 
 ## Overview
 
@@ -112,3 +114,119 @@ mvn spring-boot:run
 
 ## API Endpoints
 
+### 1. Create a User
+
+- **Method**: POST
+
+- **URL**: /api/users
+
+- **Request Body**:
+```json
+{
+  "name": "Pradip Kumar",
+  "email": "pradip@gmail.com",
+  "age": 23
+}
+```
+
+- **Response**:
+```json
+{
+  "id": 1,
+  "name": "Pradip Kumar",
+  "email": "pradip@gmail.com",
+  "age": 23
+}
+```
+
+### 2. Retrieve All Users
+- **Method**: GET
+
+- **URL**: /api/users
+
+- **Response**:
+
+  ```json
+  [
+  {
+    "id": 1,
+    "name": "Pradip Kumar",
+    "email": "pradip@gmail.com",
+    "age": 23
+  },
+  {
+    "id": 2,
+    "name": "Bikky Raja",
+    "email": "bikky@gmail.com",
+    "age": 24
+  }
+  ]
+  
+```
+
+### 3. Retrieve a Single User
+- **Method**: GET
+
+- **URL**: /api/users/1
+
+- **Response**:
+
+```json
+{
+    "id": 1,
+    "name": "Pradip Kumar",
+    "email": "pradip@gmail.com",
+    "age": 23
+  }
+```
+
+### 4. Update a User
+- **Method**: PUT
+
+- **URL**: /api/users/1
+
+- **Request Body**:
+
+```json
+{
+  "name": "Kumar Pradip",
+  "email": "kumar@gmail.com",
+  "age": 24
+}
+```
+- **Response**:
+
+```json
+{
+  "id": 1
+  "name": "Kumar Pradip",
+  "email": "kumar@gmail.com",
+  "age": 24
+}
+```
+
+### 5. Delete a User
+- **Method**: DELETE
+
+- **URL**: /api/users/1
+
+- **Response**: 204 No Content
+
+
+## Technologies Used
+- **Backend Framework**: Java, Spring Boot
+
+- **Database**: MySQL
+
+- **Build Tool**: Maven
+
+- **API Testing**: Postman
+
+## Error Handling
+### The API handles the following errors:
+
+- **400 Bad Request**: Invalid input data (e.g., missing fields).
+
+- **404 Not Found**: User not found.
+
+- **500 Internal Server Error**: Server-side errors.
