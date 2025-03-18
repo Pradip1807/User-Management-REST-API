@@ -229,3 +229,10 @@ mvn spring-boot:run
 - **404 Not Found**: User not found.
 
 - **500 Internal Server Error**: Server-side errors.
+
+## Contact and Support
+For any issues or queries, please contact: Email: kumarpradip1807@gmail.com
+
+---
+
+This README.md file provides a complete guide to understanding, setting up, and using the User Management REST API. 
